@@ -1,0 +1,20 @@
+/* index.css */
+
+/* 1. Import your elegant Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Lato:wght@300;400&display=swap');
+
+/* 2. Global Reset (Removes default browser spacing) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 3. Base Body Styles */
+body {
+  font-family: 'Cormorant Garamond', serif;
+  color: #333333;
+  background-color: #ffffff;
+  /* This makes fonts look sharper on Mac/iOS */
+  -webkit-font-smoothing: antialiased; 
+}

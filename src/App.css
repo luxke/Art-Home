@@ -1,0 +1,188 @@
+/* App.css */
+
+/* Container to keep the site centered and not too wide */
+.site-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 1. HERO SECTION */
+.hero {
+  /* Replace the URL below with your actual hero image */
+  background-image: url('htps://images.unsplash.com/photo-1606760227091-3dd870d97f1d?q=80&w=800&auto=format&fit=crop'); 
+  background-size: cover;
+  background-position: center;
+  background-color: #f0eaea;
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  padding-left: 10%; 
+  margin-top:10px ;
+  /*margin-bottom: 60px;*/
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.hero-title span {
+  border-bottom: 1px solid #777;
+  padding-bottom: 5px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.arrow-down {
+  font-size: 2rem;
+  color: #777;
+  font-family: sans-serif;
+}
+
+/* 2. CATEGORIES GRID */
+.categories-section {
+  padding: 40px 20px 80px 20px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 40px;
+}
+
+.category-card {
+  text-align: center;
+}
+
+.img-container {
+  width: 100%;
+  aspect-ratio: 16 / 9; 
+  overflow: hidden;
+  margin-bottom: 15px;
+  background-color: #f4f4f4;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-card h3 {
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+/* 3. ABOUT SECTION */
+.about-section {
+  background-color: #fcfaf8; 
+  padding: 80px 50px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-text {
+  flex: 1;
+  text-align: center;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.about-text h2 span {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #444;
+  padding: 0 20px;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* 4. CTA & FOOTER */
+.cta-section {
+  text-align: center;
+  padding: 80px 20px 100px 20px;
+  background-color: #fcfaf8;
+  margin-top: 2px; /* Slight separation from about section if needed */
+}
+
+.cta-section h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button-group button {
+  background: transparent;
+  border: 1px solid #aaa;
+  padding: 12px 40px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-group button:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* RESPONSIVE DESIGN FOR MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    padding-left: 0;
+    justify-content: center;
+  }
+  .category-grid {
+    grid-template-columns: 1fr; 
+  }
+  .about-content {
+    flex-direction: column; 
+  }
+  .button-group {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
