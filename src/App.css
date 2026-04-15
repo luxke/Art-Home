@@ -8,11 +8,10 @@
 
 /* 1. HERO SECTION */
 .hero {
-  /* Replace the URL below with your actual hero image */
-  background-image: url('htps://images.unsplash.com/photo-1606760227091-3dd870d97f1d?q=80&w=800&auto=format&fit=crop'); 
+  /* Replace the URL below with your actual hero image */ 
   background-size: cover;
   background-position: center;
-  background-color: #f0eaea;
+  background-color: #F1EFEB;
   height: 65vh;
   display: flex;
   align-items: center;
@@ -23,6 +22,18 @@
 
 .hero-content {
   text-align: center;
+}
+
+.hero-left {
+  max-width: 400px;
+}
+
+.hero-right {
+  margin-left: auto;}
+
+.hero-right img {
+  width: 500px;
+  max-width: 100%;
 }
 
 .hero-title {

@@ -21,6 +21,9 @@ function App() {
           <p className="hero-subtitle">Handcrafted stories in beads and thread</p>
           <div className="arrow-down">&#x2304;</div>
         </div>
+        <div className="hero-right">
+          <img src="/images/hero.png" alt="Art sandal" />
+        </div>
       </section>
 
       {/* 2. CATEGORIES GRID */}
