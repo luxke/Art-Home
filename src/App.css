@@ -11,7 +11,7 @@
   /* Replace the URL below with your actual hero image */ 
   background-size: cover;
   background-position: center;
-  background-color: #F1EFEB;
+  background-image: linear-gradient(rgba(43, 12, 12, 0.5), rgba(241, 236, 236, 0.5)), url('/images/Hero 3.png');
   height: 65vh;
   display: flex;
   align-items: center;
@@ -29,7 +29,9 @@
 }
 
 .hero-right {
-  margin-left: auto;}
+  margin-left: auto;
+  margin-right: 40px;
+}
 
 .hero-right img {
   width: 500px;
@@ -41,6 +43,7 @@
   font-weight: 400;
   letter-spacing: 3px;
   margin-bottom: 15px;
+  color: #ece5e5;
 }
 
 .hero-title span {
@@ -50,13 +53,13 @@
 
 .hero-subtitle {
   font-size: 1.2rem;
-  color: #555;
+  color: #8ce08c;
   margin-bottom: 20px;
 }
 
 .arrow-down {
   font-size: 2rem;
-  color: #777;
+  color: #85b9d1;
   font-family: sans-serif;
 }
 
