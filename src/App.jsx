@@ -13,8 +13,6 @@ function App() {
   return (
     <div className="site-wrapper">
       
-      {/* 1. HERO SECTION */}
-      {/* You will replace this background image in the CSS with your actual top image */}
       <section className="hero">
         <div className="hero-content">
           <h1 className="hero-title"><span>ART HOME</span></h1>
