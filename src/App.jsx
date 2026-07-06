@@ -17,7 +17,6 @@ function App() {
         <div className="hero-content">
           <h1 className="hero-title"><span>ART HOME</span></h1>
           <p className="hero-subtitle">Handcrafted stories in beads and thread</p>
-          <div className="arrow-down">&#x2304;</div>
         </div>
   
       </section>
@@ -37,21 +36,41 @@ function App() {
       </section>
 
       {/* 3. ABOUT / FEATURED SECTION */}
-      <section className="about-section">
-        <div className="about-content">
-          <div className="about-text">
-            <h2><span>A home for handmade art.</span></h2>
-            <p>
-              Each piece is crafted carefully, using beads, 
-              thread, and leather—carrying stories 
-              of hands, culture, and time.
+      <section className="story-section">
+
+    <div className="story-container">
+
+        <div className="story-text">
+
+            <p className="small-heading">
+                OUR STORY
             </p>
-          </div>
-          <div className="about-image">
-             <img src="https://images.unsplash.com/photo-1611078711671-55db5cece2f1?q=80&w=800&auto=format&fit=crop" alt="Beaded belt" />
-          </div>
+
+            <h2>
+                Every handmade piece begins with a story.
+            </h2>
+
+            <p>
+                Art Home celebrates craftsmanship through beadwork,
+                thread art, handmade sandals and leather accessories.
+                Every creation is carefully crafted by skilled artisans,
+                carrying tradition, creativity and culture into every home.
+            </p>
+
         </div>
-      </section>
+
+        <div className="story-image">
+
+            <img
+                src="/images/Hero 3.png"
+                alt="Artisan creating beadwork"
+            />
+
+        </div>
+
+    </div>
+
+</section>
 
       <section className="cta-section">
         <h2><em>Art lives here.</em> Explore the collection.</h2>
