@@ -1,212 +1,818 @@
-/* App.css */
 
-/* Container to keep the site centered and not too wide */
-.site-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
+/* =====================================
+             GLOBAL STYLING
+===================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* 1. HERO SECTION */
-.hero {
-  /* Replace the URL below with your actual hero image */ 
-  background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(rgba(43, 12, 12, 0.5), rgba(241, 236, 236, 0.5)), url('/images/Hero 3.png');
-  height: 65vh;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #F1EFEB;
+  color: #2B211C;
+}
+
+.site-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* =====================================
+                NAVBAR
+===================================== */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 15px 8%;
+
   display: flex;
   align-items: center;
-  padding-left: 10%; 
-  margin-top:10px ;
-  /*margin-bottom: 60px;*/
+  justify-content: space-between;
+
+  z-index: 10;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(35, 17, 11, 0.65),
+    rgba(35, 17, 11, 0.25),
+    transparent
+  );
 }
+
+/* Logo */
+
+.brand-logo {
+  position: relative;
+  width: 85px;
+  height: 65px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff8ed;
+  text-decoration: none;
+  font-family: Georgia, serif;
+  font-size: 23px;
+  line-height: 0.85;
+  letter-spacing: 1px;
+}
+
+.brand-logo svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 38px;
+  overflow: visible;
+}
+
+.brand-logo svg path {
+  fill: none;
+  stroke: #fff0d8;
+  stroke-width: 1.5;
+}
+
+.brand-logo span:first-of-type {
+  margin-top: 12px;
+}
+
+/* Navigation links */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #e5a66c;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #d99a5e;
+  left: 0;
+  bottom: -9px;
+}
+
+.nav-arrow {
+  font-size: 17px;
+  margin-left: 3px;
+}
+
+/* Search and shopping bag */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-icon {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.bag-icon {
+  font-size: 24px;
+}
+
+
+/* =====================================
+             HERO SECTION
+===================================== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  min-height: 720px;
+  height: 100vh;
+
+  background-image: url("https://cdn.sanity.io/images/dtgxqbm7/production/3ae9dd0aa9f2433c5aad8cdd2efe49f5cea64922-2160x1440.jpg");
+
+  background-size: cover;
+  background-position: center 43%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 100px 8% 40px;
+}
+
+/* Dark overlay */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 13, 8, 0.48) 0%,
+    rgba(30, 13, 8, 0.25) 35%,
+    rgba(30, 13, 8, 0.40) 100%
+  );
+}
+
+/* Hero content */
 
 .hero-content {
-  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+  color: #fff8ed;
 }
 
-.hero-left {
-  max-width: 400px;
+/* Small heading */
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+
+  color: #e9bd8b;
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: 600;
 }
 
-.hero-right {
-  margin-left: auto;
-  margin-right: 40px;
+.eyebrow-line {
+  width: 150px;
+  height: 1px;
+  background: #d9a66f;
 }
 
-.hero-right img {
-  width: 500px;
-  max-width: 100%;
-}
+/* Main heading */
 
 .hero-title {
-  font-size: 3.5rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(65px, 7vw, 90px);
   font-weight: 400;
-  letter-spacing: 3px;
-  margin-bottom: 15px;
-  color: #ece5e5;
+  letter-spacing: 2px;
+  line-height: 1.05;
+  color: #fffaf2;
+  margin-bottom: 8px;
 }
 
-.hero-title span {
-  border-bottom: 1px solid #777;
-  padding-bottom: 5px;
-}
+/* Subtitle */
 
 .hero-subtitle {
-  font-size: 1.2rem;
-  color: #8ce08c;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 23px;
+  color: #fff2e4;
+  margin-bottom: 28px;
+}
+
+/* Explore button */
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+
+  background: #c98245;
+  color: white;
+
+  text-decoration: none;
+  padding: 14px 25px;
+
+  border-radius: 35px;
+  font-size: 14px;
+
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background: #a85f2c;
+  transform: translateY(-3px);
+}
+
+.hero-button span {
+  font-size: 20px;
+}
+
+/* Scroll indicator */
+
+.scroll-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  font-size: 13px;
+  color: #fff4e8;
+}
+
+.scroll-icon {
+  width: 14px;
+  height: 23px;
+  border: 1.5px solid white;
+  border-radius: 10px;
+  position: relative;
+}
+
+.scroll-icon::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 5px;
+  background: white;
+  left: 5px;
+  top: 4px;
+  border-radius: 5px;
+}
+
+
+/* =====================================
+                HERO WAVE
+===================================== */
+
+.hero-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.hero-wave svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =====================================
+               OUR STORY
+===================================== */
+
+.story-section {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  padding: 0 8% 90px;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 50px;
+
+  background: #F8F0E7;
+  overflow: hidden;
+}
+
+/* Decorative background circle */
+
+.story-decoration {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border: 1px solid rgba(201, 130, 69, 0.2);
+  border-radius: 50%;
+  left: -170px;
+  top: 10px;
+}
+
+/* Story text */
+
+.story-text {
+  position: relative;
+  z-index: 2;
+  max-width: 470px;
+}
+
+/* Section label */
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #773D21;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
   margin-bottom: 20px;
 }
 
-
-/* 2. CATEGORIES GRID */
-.categories-section {
-  padding: 40px 20px 80px 20px;
+.section-label span {
+  width: 55px;
+  height: 1px;
+  background: #C98245;
 }
 
-.category-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; 
-  gap: 40px;
+/* Main heading */
+
+.story-text h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(34px, 3.5vw, 46px);
+  font-weight: 400;
+  line-height: 1.12;
+  color: #542C1C;
+  margin-bottom: 22px;
 }
 
-.category-card {
-  text-align: center;
+/* Description */
+
+.story-text > p {
+  max-width: 440px;
+  font-size: 14px;
+  line-height: 1.85;
+  color: #493B33;
+  margin-bottom: 25px;
 }
 
-.img-container {
+/* Discover button */
+
+.story-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+
+  background: #984A24;
+  color: #fff;
+
+  text-decoration: none;
+  padding: 13px 22px;
+  border-radius: 30px;
+
+  font-size: 13px;
+  transition: 0.3s ease;
+}
+
+.story-button:hover {
+  background: #71351B;
+  transform: translateY(-3px);
+}
+
+.story-button span {
+  font-size: 18px;
+}
+
+
+/* =====================================
+          STORY IMAGE GALLERY
+===================================== */
+
+.story-gallery {
+  position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9; 
-  overflow: hidden;
-  margin-bottom: 15px;
-  background-color: #f4f4f4;
+  height: 390px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.img-container img {
+/* Terracotta circle */
+
+.story-circle {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  background: #C98245;
+  border-radius: 50%;
+
+  left: 0;
+  top: 40px;
+  z-index: 0;
+}
+
+/* Main photograph */
+
+.story-main-image {
+  position: absolute;
+  width: 75%;
+  height: 320px;
+
+  left: 5%;
+  top: -50px;
+
+  overflow: hidden;
+  z-index: 1;
+
+  border-radius: 100% 0 0 0;
+}
+
+.story-main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Narrow detail photograph */
+
+.story-detail-image {
+  position: absolute;
+  width: 19%;
+  height: 300px;
+
+  border-radius: 5%;
+  right: -3%;
+  top: -50px;
+
+  overflow: hidden;
+  z-index: 2;
+
+  clip-path: polygon(
+    2% 0,
+    100% 0,
+    100% 80%,
+    0 100%
+  );
+}
+
+.story-detail-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.category-card h3 {
-  font-weight: 400;
-  font-size: 1.4rem;
-  letter-spacing: 1px;
+
+
+
+/* =====================================
+         EXPLORE OUR COLLECTIONS
+===================================== */
+
+.collections-section {
+  width: 100%;
+  padding: 55px 5% 65px;
+  background: #F8F0E7;
 }
 
-.story-section{
+/* Heading */
 
-    padding:120px 10%;
-    background:#F1EFEB;
-
-}
-
-.story-container{
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:80px;
-
-}
-
-.story-text{
-
-    flex:1;
-
-}
-
-.small-heading{
-
-    letter-spacing:3px;
-    color:#8C6A43;
-    margin-bottom:20px;
-    font-size:13px;
-
-}
-
-.story-text h2{
-
-    font-size:48px;
-    font-weight:500;
-    margin-bottom:30px;
-    line-height:1.2;
-
-}
-
-.story-text p{
-
-    color:#666;
-    line-height:1.9;
-    font-size:18px;
-
-}
-
-.story-image{
-
-    flex:1;
-
-}
-
-.story-image img{
-
-    width:100%;
-    border-radius:6px;
-
-}
-
-/* 4. CTA & FOOTER */
-.cta-section {
+.collections-heading {
   text-align: center;
-  padding: 80px 20px 100px 20px;
-  background-color: #fcfaf8;
-  margin-top: 2px; /* Slight separation from about section if needed */
+  margin-bottom: 32px;
 }
 
-.cta-section h2 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  margin-bottom: 40px;
-}
-
-.button-group {
-  display: flex;
+.collections-heading .section-label {
   justify-content: center;
-  gap: 20px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
 }
 
-.button-group button {
-  background: transparent;
-  border: 1px solid #aaa;
-  padding: 12px 40px;
-  font-family: inherit;
-  font-size: 1rem;
-  color: #333;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.collections-heading .section-label span {
+  width: 35px;
 }
 
-.button-group button:hover {
-  background: #333;
-  color: #fff;
+.collections-heading h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(30px, 3vw, 40px);
+  font-weight: 400;
+  color: #542C1C;
+  margin: 0;
 }
 
-/* RESPONSIVE DESIGN FOR MOBILE */
+/* Collection grid */
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  width: 100%;
+}
+
+/* Individual cards */
+
+.collection-card {
+  position: relative;
+  display: block;
+  height: 210px;
+  overflow: hidden;
+  border-radius: 13px;
+  text-decoration: none;
+  background: #542C1C;
+}
+
+.collection-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Dark overlay */
+
+.collection-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(35, 19, 11, 0.85),
+    rgba(35, 19, 11, 0.05) 75%
+  );
+}
+
+/* Text on cards */
+
+.collection-overlay {
+  position: absolute;
+  left: 15px;
+  right: 10px;
+  bottom: 16px;
+  z-index: 2;
+  color: #FFFFFF;
+}
+
+.collection-overlay h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 21px;
+  font-weight: 400;
+  margin: 0 0 5px;
+}
+
+.collection-overlay span {
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  color: #F5D6B9;
+}
+
+/* Hover effects */
+
+.collection-card:hover img {
+  transform: scale(1.07);
+}
+
+.collection-card:hover .collection-overlay span {
+  color: #FFFFFF;
+}
+
+
+/* =====================================
+       MOBILE RESPONSIVE DESIGN
+===================================== */
+
 @media (max-width: 768px) {
+
+  /* NAVBAR */
+
+  .navbar {
+    height: 80px;
+    padding: 12px 5%;
+  }
+
+  .brand-logo {
+    transform: scale(0.85);
+    transform-origin: left center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-actions {
+    gap: 12px;
+  }
+
+
+  /* HERO SECTION */
+
   .hero {
-    padding-left: 0;
-    justify-content: center;
+    min-height: 650px;
+    height: 90vh;
+    padding: 100px 7% 40px;
+    background-position: center;
   }
-  .category-grid {
-    grid-template-columns: 1fr; 
+
+  .hero-content {
+    max-width: 100%;
   }
-  .about-content {
-    flex-direction: column; 
-  }
-  .button-group {
-    flex-direction: column;
-    padding: 0 20px;
-  }
+
   .hero-title {
-    font-size: 2.5rem;
+    font-size: clamp(48px, 12vw, 68px);
   }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .eyebrow-line {
+    width: 65px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+
+
+/* ---------------------------------
+          OUR STORY - MOBILE
+--------------------------------- */
+
+.story-section {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 20px 10px;
+
+  padding: 45px 7% 55px;
+  min-height: auto;
+}
+
+/* Heading and description */
+
+.story-text {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  max-width: 100%;
+}
+
+.story-text h2 {
+  font-size: 34px;
+  line-height: 1.15;
+}
+
+.story-text h2 br {
+  display: none;
+}
+
+.story-text > p {
+  font-size: 13px;
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+
+/* Button and gallery share the bottom row */
+
+.story-bottom-row {
+  display: contents;
+}
+
+.story-button {
+  grid-column: 1;
+  grid-row: 2;
+
+  align-self: center;
+  justify-self: start;
+
+  padding: 12px 13px;
+  gap: 8px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.story-button span {
+  font-size: 15px;
+}
+
+/* Smaller image gallery on mobile */
+
+.story-gallery {
+  grid-column: 2;
+  grid-row: 2;
+
+  width: 100%;
+  height: 190px;
+  display: block;
+  overflow: hidden;
+}
+
+/* Terracotta circle */
+
+.story-circle {
+  width: 105px;
+  height: 105px;
+  left: 0;
+  top: 55px;
+}
+
+/* Main image */
+
+.story-main-image {
+  width: 78%;
+  height: 165px;
+  left: 0;
+  top: 15px;
+}
+
+/* Detail image */
+
+.story-detail-image {
+  width: 25%;
+  height: 130px;
+  right: 0;
+  top: 42px;
+}
+
+
+
+  /* EXPLORE OUR COLLECTIONS */
+
+  .collections-section {
+    padding: 40px 6% 50px;
+  }
+
+  .collections-heading {
+    margin-bottom: 25px;
+  }
+
+  .collections-heading h2 {
+    font-size: 30px;
+  }
+
+  .collections-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .collection-card {
+    height: 180px;
+    border-radius: 10px;
+  }
+
+  .collection-overlay {
+    left: 10px;
+    bottom: 12px;
+  }
+
+  .collection-overlay h3 {
+    font-size: 17px;
+  }
+
+  .collection-overlay span {
+    font-size: 9px;
+  }
+
 }
