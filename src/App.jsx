@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import CollectionsCarousel from "./CollectionsCarousel";
 
 function App() {
   return (
@@ -113,11 +114,11 @@ function App() {
             OUR STORY
           </div>
 
-          <h2>
-            Every handmade piece
-            <br />
-            begins with a story.
-          </h2>
+        <h2>
+          Every handmade piece{" "}
+          <br />
+          begins with a story.
+        </h2>
 
           <p>
             Art Home celebrates craftsmanship through beadwork,
@@ -161,93 +162,7 @@ function App() {
       </section>
 
 
-{/* =====================================
-       EXPLORE OUR COLLECTIONS
-===================================== */}
-
-<section className="collections-section" id="collections">
-
-  {/* Section heading */}
-
-  <div className="collections-heading">
-
-    <div className="section-label">
-      <span></span>
-      HANDCRAFTED WITH LOVE
-      <span></span>
-    </div>
-
-    <h2>Explore Our Collections</h2>
-
-  </div>
-
-
-  {/* Collection cards */}
-
-  <div className="collections-grid">
-
-    {/* Bead Art */}
-
-    <a href="#bead-art" className="collection-card">
-      <img
-        src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?q=85&w=800&auto=format&fit=crop"
-        alt="Handcrafted bead jewellery"
-      />
-
-      <div className="collection-overlay">
-        <h3>Bead Art</h3>
-        <span>Explore Collection →</span>
-      </div>
-    </a>
-
-
-    {/* Thread Art */}
-
-    <a href="#thread-art" className="collection-card">
-      <img
-        src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?q=85&w=800&auto=format&fit=crop"
-        alt="Handcrafted textile and thread art"
-      />
-
-      <div className="collection-overlay">
-        <h3>Thread Art</h3>
-        <span>Explore Collection →</span>
-      </div>
-    </a>
-
-
-    {/* Maasai Sandals */}
-
-    <a href="#sandals" className="collection-card">
-      <img
-        src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=85&w=800&auto=format&fit=crop"
-        alt="Handcrafted sandals"
-      />
-
-      <div className="collection-overlay">
-        <h3>Maasai Sandals</h3>
-        <span>Explore Collection →</span>
-      </div>
-    </a>
-
-
-    {/* Belts */}
-
-    <a href="#belts" className="collection-card">
-      <img
-        src="https://images.unsplash.com/photo-1624222247344-550fb8b3a0a5?q=85&w=800&auto=format&fit=crop"
-        alt="Handcrafted leather accessories"
-      />
-
-      <div className="collection-overlay">
-        <h3>Belts</h3>
-        <span>Explore Collection →</span>
-      </div>
-    </a>
-
-  </div>
-
-</section>
+<CollectionsCarousel />
 
 
     </div>
